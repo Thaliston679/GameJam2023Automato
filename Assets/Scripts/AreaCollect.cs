@@ -10,7 +10,7 @@ public class AreaCollect : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Part"))
         {
-            gm.PartInArea(collision.gameObject.GetComponent<SpriteRenderer>().sprite);
+            gm.PartInArea(collision.gameObject.GetComponent<SpriteRenderer>().sprite, collision.gameObject);
         }
     }
 
@@ -18,7 +18,7 @@ public class AreaCollect : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Part"))
         {
-            gm.PartOutArea();
+            gm.PartOutArea(collision.gameObject);
         }
     }
 }
